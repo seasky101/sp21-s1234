@@ -1,7 +1,6 @@
 package timingtest;
 
-/** An SLList is a list of integers, which hides the terrible truth
- * of the nakedness within. */
+/** An SLList is a list of integers, which hides the terrible truth of the nakedness within. */
 public class SLList<Item> {
 	private class IntNode {
 		public Item item;
@@ -65,7 +64,6 @@ public class SLList<Item> {
 
 		return p.item;
 	}
-
 
 	/** Returns the size of the list. */
 	public int size() {
