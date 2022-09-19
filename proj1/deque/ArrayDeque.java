@@ -9,31 +9,30 @@ public class ArrayDeque<T> {
     public ArrayDeque() {
         items = (T[]) new Object[8];
         size = 0;
-        first = 0;
-        last = 0;
+        first = 1;
+        last = 7;
     }
 
     public void addFirst(T item) {
 
-        items[first] = item;
-        size += 1;
         if (first == 0) {
             first = items.length - 1;
-            last += 1;
         } else {
             first -= 1;
         }
+        items[first] = item;
+        size += 1;
     }
 
     public void addLast(T item) {
 
-        items[last] = item;
-        size += 1;
         if (last == items.length - 1) {
             last = 0;
         } else {
             last += 1;
         }
+        items[last] = item;
+        size += 1;
     }
 
     public boolean isEmpty() {
@@ -46,7 +45,7 @@ public class ArrayDeque<T> {
 
     public void printDeque() {
         int i = first;
-        if (first + size > items.length) {
+        if (first > last) {
             while (i < items.length) {
                 System.out.print(items[i] + " ");
                 i += 1;
@@ -74,7 +73,7 @@ public class ArrayDeque<T> {
         items[first] = null;
         size -= 1;
         if (first == items.length - 1) {
-           first = 0;
+            first = 0;
         } else {
             first += 1;
         }
@@ -101,6 +100,6 @@ public class ArrayDeque<T> {
         if (index < 0 || index >= size) {
             return null;
         }
-        return items[(first+index) % items.length];
+        return items[(first + index) % items.length];
     }
 }
