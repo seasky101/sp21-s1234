@@ -10,7 +10,7 @@ public class ArrayDeque<T> {
         items = (T[]) new Object[8];
         size = 0;
         first = 1;
-        last = 7;
+        last = 0;
     }
 
     public void addFirst(T item) {
