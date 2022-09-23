@@ -3,6 +3,7 @@ package flik;
 /** An Integer tester created by Flik Enterprises.
  * @author Josh Hug
  * */
+
 public class Flik {
     /** @param a Value 1
      *  @param b Value 2
