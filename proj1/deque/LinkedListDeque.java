@@ -154,6 +154,7 @@ public class LinkedListDeque<T> implements Iterable<T>, Deque<T> {
         return false;
     }
 
+    /*
     public static void main(String[] args) {
         LinkedListDeque<Integer> lld1 = new LinkedListDeque<>();
         lld1.addLast(3); lld1.addLast(7); lld1.addLast(9);
@@ -172,4 +173,5 @@ public class LinkedListDeque<T> implements Iterable<T>, Deque<T> {
 
         System.out.println(lld1.getRecursive(2));
     }
+    */
 }

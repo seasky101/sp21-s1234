@@ -172,6 +172,7 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
         return false;
     }
 
+    /*
     public static void main(String[] args) {
         ArrayDeque<Integer> ad1 = new ArrayDeque<>();
         ad1.addLast(3); ad1.addLast(7); ad1.addLast(9);
@@ -188,4 +189,5 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
             System.out.println(item);
         }
     }
+    */
 }
