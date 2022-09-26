@@ -47,17 +47,6 @@ public class LinkedListDeque<T> implements Iterable<T>, Deque<T> {
     }
 
     @Override
-    public void printDeque() {
-        TNode p = sentinel;
-        while (p.next != sentinel) {
-            System.out.print(p.item + " ");
-            p = p.next;
-        }
-        System.out.print(p.item);
-        System.out.println();
-    }
-
-    @Override
     public T removeFirst() {
         if (isEmpty()) {
             return null;
@@ -141,24 +130,24 @@ public class LinkedListDeque<T> implements Iterable<T>, Deque<T> {
             return true;
         }
         /*
-        if (obj instanceof LinkedListDeque lld) {
-            if (this.size != lld.size) {
+        if (obj instanceof Deque d) {
+            if (this.size != d.size()) {
                 return false;
             }
             for (int i = 0; i < this.size; i += 1) {
-                if (!this.get(i).equals(lld.get(i))) {
+                if (!this.get(i).equals(d.get(i))) {
                     return false;
                 }
             }
             return true;
         }
          */
-        if (obj instanceof LinkedListDeque) {
-            if (this.size != ((LinkedListDeque) obj).size) {
+        if (obj instanceof Deque) {
+            if (this.size != ((Deque) obj).size()) {
                 return false;
             }
             for (int i = 0; i < this.size; i += 1) {
-                if (!this.get(i).equals(((LinkedListDeque) obj).get(i))) {
+                if (!this.get(i).equals(((Deque) obj).get(i))) {
                     return false;
                 }
             }
@@ -172,13 +161,13 @@ public class LinkedListDeque<T> implements Iterable<T>, Deque<T> {
         LinkedListDeque<Integer> lld1 = new LinkedListDeque<>();
         lld1.addLast(3); lld1.addLast(7); lld1.addLast(9);
 
+        ArrayDeque<Integer> ad = new ArrayDeque<>();
+        ad.addLast(3); ad.addLast(7); ad.addLast(9);
+
         LinkedListDeque<Integer> lld2 = new LinkedListDeque<>();
-        lld2.addLast(3); lld2.addLast(7); lld2.addLast(9);
+        lld2.addLast(3); lld2.addLast(5); lld2.addLast(9);
 
-        LinkedListDeque<Integer> lld3 = new LinkedListDeque<>();
-        lld3.addLast(3); lld3.addLast(5); lld3.addLast(9);
-
-        System.out.println(lld1.equals(lld2)); System.out.println(lld1.equals(lld3));
+        System.out.println(lld1.equals(ad)); System.out.println(lld1.equals(lld2));
 
         for (int item: lld1) {
             System.out.println(item);
