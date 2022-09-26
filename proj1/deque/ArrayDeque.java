@@ -56,7 +56,9 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
     }
 
     @Override
-    public int size() { return size; }
+    public int size() {
+        return size;
+    }
 
     @Override
     public void printDeque() {
@@ -135,7 +137,9 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
     }
 
     @Override
-    public Iterator<T> iterator() { return new ADIterator(); }
+    public Iterator<T> iterator() {
+        return new ADIterator();
+    }
 
     @Override
     public boolean equals(Object obj) {
