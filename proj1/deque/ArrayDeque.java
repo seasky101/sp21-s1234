@@ -170,7 +170,7 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
             }
             return true;
         }
-        */
+         */
         if (obj instanceof ArrayDeque) {
             if (this.size != ((ArrayDeque) obj).size) {
                 return false;
@@ -202,5 +202,5 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
             System.out.println(item);
         }
     }
-    */
+     */
 }
