@@ -74,7 +74,7 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
             return null;
         }
         if (items.length >= 16 && size - 1 < items.length * 0.25) {
-            resize(size / 2);
+            resize(items.length / 2);
         }
 
         T returnItem = items[first];
@@ -94,7 +94,7 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
             return null;
         }
         if (items.length >= 16 && size - 1 < items.length * 0.25) {
-            resize(size / 2);
+            resize(items.length / 2);
         }
 
         T returnItem = items[last];
@@ -172,27 +172,4 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
         }
         return false;
     }
-
-    /*
-    public static void main(String[] args) {
-        LinkedListDeque<Integer> lld = new LinkedListDeque<>();
-        lld.addLast(3); lld.addLast(7); lld.addLast(9);
-
-        ArrayDeque<Integer> ad1 = new ArrayDeque<>();
-        ad1.addLast(3); ad1.addLast(7); ad1.addLast(9);
-
-        ArrayDeque<Integer> ad2 = new ArrayDeque<>();
-        ad2.addLast(3); ad2.addLast(5); ad2.addLast(9);
-
-        System.out.println(ad1.equals(lld)); System.out.println(ad1.equals(ad2));
-
-        for (int item: ad1) {
-            System.out.println(item);
-        }
-
-        for (int i = 0; i < 10; i += 1) {
-            ad1.addLast(i);
-        }
-    }
-     */
 }

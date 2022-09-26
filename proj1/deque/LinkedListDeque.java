@@ -163,25 +163,4 @@ public class LinkedListDeque<T> implements Iterable<T>, Deque<T> {
         }
         return false;
     }
-
-    /*
-    public static void main(String[] args) {
-        LinkedListDeque<Integer> lld1 = new LinkedListDeque<>();
-        lld1.addLast(3); lld1.addLast(7); lld1.addLast(9);
-
-        ArrayDeque<Integer> ad = new ArrayDeque<>();
-        ad.addLast(3); ad.addLast(7); ad.addLast(9);
-
-        LinkedListDeque<Integer> lld2 = new LinkedListDeque<>();
-        lld2.addLast(3); lld2.addLast(5); lld2.addLast(9);
-
-        System.out.println(lld1.equals(ad)); System.out.println(lld1.equals(lld2));
-
-        for (int item: lld1) {
-            System.out.println(item);
-        }
-
-        System.out.println(lld1.getRecursive(2));
-    }
-     */
 }
