@@ -131,7 +131,7 @@ public class ArrayDeque<T> implements Iterable<T>, Deque<T> {
     private class ADIterator implements Iterator<T> {
         private int wizPos;
 
-        public ADIterator() {
+        ADIterator() {
             wizPos = 0;
         }
 
