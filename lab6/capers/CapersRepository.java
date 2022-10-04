@@ -23,7 +23,7 @@ public class CapersRepository {
     static final File CAPERS_FOLDER = new File(".capers"); // TODO Hint: look at the `join` function in Utils
 
     /** File containing the current story. */
-    static final File story = new File(".capers/story");
+    static File story = new File(".capers/story");
 
     /**
      * Does required filesystem operations to allow for persistence.
@@ -31,14 +31,14 @@ public class CapersRepository {
      * Remember: recommended structure (you do not have to follow):
      *
      * .capers/ -- top level folder for all persistent data in your lab12 folder
-     *    - dogs/ -- folder containing all of the persistent data for dogs
+     *    - dogs/ -- folder containing all the persistent data for dogs
      *    - story -- file containing the current story
      */
     public static void setupPersistence() {
         // TODO
         // File story = new File(".capers/story");
         CAPERS_FOLDER.mkdir();
-        capers.Dog.DOG_FOLDER.mkdir();
+        Dog.DOG_FOLDER.mkdir();
         try {
             story.createNewFile();
         } catch (IOException e) {
