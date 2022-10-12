@@ -104,10 +104,6 @@ public class BSTMap<K extends Comparable<K>, V> implements Map61B<K, V> {
         return T;
     }
 
-    public void printInOrder() {
-        throw new UnsupportedOperationException();
-    }
-
     /* Returns a Set view of the keys contained in this map. Not required for Lab 7.
      * If you don't implement this, throw an UnsupportedOperationException. */
     @Override
