@@ -148,10 +148,9 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
             for (Node item: buckets[index]) {
                 if (item.key.equals(key)) {
                     item.value = value;
-                    break;
+                    return;
                 }
             }
-            return;
         }
 
         if ((double) (size()+1) / (double) buckets.length > loadFactor) {
@@ -181,8 +180,8 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
     @Override
     public Set<K> keySet() {
         Set<K> keySet = new HashSet<>();
-        for (Collection<Node> bucket : buckets) {
-            for (Node item : bucket) {
+        for (Collection<Node> bucket: buckets) {
+            for (Node item: bucket) {
                 keySet.add(item.key);
             }
         }
