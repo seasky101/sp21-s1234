@@ -114,7 +114,7 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
             return false;
         }
         int index = Math.floorMod(key.hashCode(), buckets.length);
-        for (Node item: buckets[index]) {
+        for (Node item : buckets[index]) {
             if (item.key.equals(key)) {
                 return true;
             }
@@ -128,7 +128,7 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
             return null;
         }
         int index = Math.floorMod(key.hashCode(), buckets.length);
-        for (Node item: buckets[index]) {
+        for (Node item : buckets[index]) {
             if (item.key.equals(key)) {
                 return item.value;
             }
@@ -145,7 +145,7 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
     public void put(K key, V value) {
         int index = Math.floorMod(key.hashCode(), buckets.length);
         if (containsKey(key)) {
-            for (Node item: buckets[index]) {
+            for (Node item : buckets[index]) {
                 if (item.key.equals(key)) {
                     item.value = value;
                     return;
@@ -180,8 +180,8 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
     @Override
     public Set<K> keySet() {
         Set<K> keySet = new HashSet<>();
-        for (Collection<Node> bucket: buckets) {
-            for (Node item: bucket) {
+        for (Collection<Node> bucket : buckets) {
+            for (Node item : bucket) {
                 keySet.add(item.key);
             }
         }
